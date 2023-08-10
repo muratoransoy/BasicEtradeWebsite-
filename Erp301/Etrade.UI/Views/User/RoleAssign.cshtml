@@ -1,0 +1,30 @@
+﻿@using Etrade.Entities.Models.ViewModel
+@model List<RoleAssignViewModel>
+@{
+    ViewData["Title"] = "RoleAssign";
+}
+
+<h1>RoleAssign</h1>
+<h3>@ViewBag.Username</h3>
+<form method="post">
+    <table class="table table-bordered table-striped">
+        <thead>
+        <th>Role Name</th>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <td>
+                        <input type="checkbox" asp-for="@Model[i].HasAssign"/>
+                        @Model[i].Name
+                        <input type="hidden" asp-for="@Model[i].Id" />
+                        <input type="hidden" asp-for="@Model[i].Name" />
+                    </td>
+                </tr>
+            }
+            
+        </tbody>
+    </table>
+    <input type="submit" class="btn btn-primary" value="Role Ata" />
+</form>

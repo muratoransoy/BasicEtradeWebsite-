@@ -24,4 +24,8 @@
     <ProjectReference Include="..\Etrade.Entities\Etrade.Entities.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\CategoryController1\" />
+  </ItemGroup>
+
 </Project>
